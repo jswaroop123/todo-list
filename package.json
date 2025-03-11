@@ -1,0 +1,11 @@
+{
+  "name": "todo-list",
+  "version": "0.0.0",
+  "description": "to provide a remainder to the user.",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.js"
+  },
+  "author": "jyothiswaroop",
+  "license": "MIT"
+}
