@@ -1,6 +1,7 @@
 
 import { reminderDatabase } from './reminder';
 
+
 const reminderDB = new reminderDatabase();
 
 
@@ -23,6 +24,11 @@ const id3 = reminderDB.createReminder({
     dueDate: '2021-10-20'
 });
 
+const id4 = reminderDB.createReminder({
+    title: "Doctor's Appointment",
+    description: "Visit Dr. Smith at 3 PM",
+    dueDate: "2025-03-12"
+});
 
 console.log('First-Time Creation:\n')
 console.log(reminderDB.getAllReminders());
@@ -61,3 +67,6 @@ reminderDB.getIncompletedReminders();
 
 //checking past due reminders
 reminderDB.getPastDueReminders();
+
+reminderDB.searchReminderById(id4);
+

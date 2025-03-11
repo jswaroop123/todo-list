@@ -130,6 +130,14 @@ export class reminderDatabase{
     
         return pastDueReminders;
     }
-
+    searchReminderById(id: string): reminder | undefined {
+        const reminder = this.reminders.get(id);
+        if (!reminder) {
+            console.log(`\nNo reminder found with id: '${id}'\n`);
+            return undefined;
+        }
+        console.log('\nReminder found:\n', reminder);
+        return reminder;
+    }
 
 }
