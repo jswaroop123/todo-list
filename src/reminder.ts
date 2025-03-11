@@ -13,7 +13,8 @@ export class reminderDatabase{
     createReminder(reminder: reminder): string{
         let id = Math.random().toString(36).substring(2, 11);
         reminder.id = id;
-        this.reminders.set(id, {...reminder, id, isCompleted:false} );
+        reminder.isCompleted = false;
+        this.reminders.set(id, reminder );
         console.log(`Reminder created successfully with id: ${id}\n`);
         return id;
     }
